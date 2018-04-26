@@ -20,9 +20,9 @@ def kernel(x, y, l):
     return result
 def kernel_comp(x, y, l):
     return np.exp(-(x-y)**2/(2*l**2))
-
-x_star = np.arange(-5, 5, 0.1)
-cov = kernel(x_star, x_star, 100)
+l=50
+x_star = np.arange(0, 100, 0.1)
+cov = kernel(x_star, x_star, l)
 y_star1 = np.random.multivariate_normal(np.zeros(x_star.shape), cov)
 y_star2 = np.random.multivariate_normal(np.zeros(x_star.shape), cov)
 y_star3 = np.random.multivariate_normal(np.zeros(x_star.shape), cov)
@@ -36,7 +36,7 @@ plt.plot(x_star, y_star4, 'y-')
 plt.plot(x_star, y_star5, 'c-')
 plt.xlabel('$x$')
 plt.ylabel('$f(x)$')
-plt.title("5 samples of function with l = 100")
+plt.title("5 samples of function with l = " + str(l))
 
 
 
