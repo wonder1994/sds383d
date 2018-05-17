@@ -1,0 +1,1 @@
+One perspective to look at Gaussian process is that we introduce a joint distribution over $y$ by restricting the distribution to be Gaussian, then we only care about the correlation matrix which is defined using kernel function(similarity function among the covariates).
